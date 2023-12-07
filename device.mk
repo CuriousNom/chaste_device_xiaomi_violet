@@ -408,7 +408,7 @@ PRODUCT_COPY_FILES += \
     
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Launcher3QuickStep \
+    NexusLauncherRelease \
     SettingsGoogle \
     SystemUIGoogle
 
