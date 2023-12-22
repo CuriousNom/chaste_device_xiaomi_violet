@@ -10,6 +10,9 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# MiuiCamera
+$(call inherit-product, vendor/MiuiCamera/config.mk)
+
 # Matrixx
 MATRIXX_BUILD_TYPE := Unofficial
 MATRIXX_MAINTAINER := Aryan
