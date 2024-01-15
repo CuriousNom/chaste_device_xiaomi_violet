@@ -14,7 +14,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Matrixx
-MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_BUILD_TYPE := Official
 MATRIXX_MAINTAINER := Aryan
 MATRIXX_CHIPSET := SM6150
 MATRIXX_BATTERY := 4000mAh
