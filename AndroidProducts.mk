@@ -6,10 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_violet.mk
+    $(LOCAL_DIR)/banana_violet.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_violet-userdebug \
-    evolution_violet-user \
-    evolution_violet-eng
-    
+    banana_violet-userdebug \
+    banana_violet-user \
+    banana_violet-eng
