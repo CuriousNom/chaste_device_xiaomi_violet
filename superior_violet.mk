@@ -8,13 +8,6 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_PICO_GAPPS := true
-TARGET_ENABLE_BLUR := false
-EVO_BUILD_TYPE := OFFICIAL
-
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
@@ -24,8 +17,29 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Charging Animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
+# Inherit some common SuperiorExtendedOS stuff.
+$(call inherit-product, vendor/superior/config/common.mk)
+
+TARGET_SHIPS_PREBUILT_GCAM := false
+TARGET_INCLUDE_MATLOG := false
+USE_MOTO_CALCULATOR := true
+TARGET_SUPPORTS_BLUR := true
+SUPERIOR_UDFPS_ANIMATIONS := false
+USE_MOTO_CLOCK := true
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+BUILD_WITH_GAPPS := false
+USE_QUICKPIC := true
+USE_DUCKDUCKGO := false
+USE_ViaBrowser := false
+TARGET_BUILD_VIMUSIC := true
+
+# Maintainer
+PRODUCT_SYSTEM_PROPERTIES += \
+       ro.spos.maintainer=@CuriousNom
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_violet
+PRODUCT_NAME := superior_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
@@ -35,9 +49,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="violet"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Some Extra Stuffs.
-EVO_SUPPORT_URL := https://t.me/EvolutionXViolet
-EVO_SIGNED := true
-BUILD_USERNAME := kibria5
-BUILD_HOSTNAME := Evolution-X
