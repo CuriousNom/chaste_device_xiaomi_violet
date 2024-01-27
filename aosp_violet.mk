@@ -8,6 +8,9 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
+# MiuiCamera
+$(call inherit-product, vendor/MiuiCamera/config.mk)
+
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
