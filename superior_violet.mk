@@ -14,16 +14,13 @@ $(call inherit-product, vendor/MiuiCamera/config.mk)
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Charging Animation
-TARGET_INCLUDE_PIXEL_CHARGER := true
-
 # Inherit some common SuperiorExtendedOS stuff.
 $(call inherit-product, vendor/superior/config/common.mk)
 
-TARGET_SHIPS_PREBUILT_GCAM := false
+TARGET_SHIPS_PREBUILT_GCAM := true
 TARGET_INCLUDE_MATLOG := false
 USE_MOTO_CALCULATOR := true
-TARGET_SUPPORTS_BLUR := true
+TARGET_SUPPORTS_BLUR := false
 SUPERIOR_UDFPS_ANIMATIONS := false
 USE_MOTO_CLOCK := true
 SYSTEM_OPTIMIZE_JAVA := true
